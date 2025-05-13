@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.4">
   <diagram name="Page-1" id="eJ0Qw4Db6nhhG4S1m9tW">
-    <mxGraphModel dx="689" dy="361" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="1205" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -75,7 +75,7 @@
           <mxGeometry x="620" y="1370" width="440" height="200" as="geometry" />
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-18" value="Main System" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="675" y="1410" width="60" height="30" as="geometry" />
+          <mxGeometry x="660" y="1410" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vhmr5BV3yXntm19uQJfj-2" target="vhmr5BV3yXntm19uQJfj-9">
           <mxGeometry relative="1" as="geometry">
@@ -100,6 +100,29 @@
               <mxPoint x="540" y="1240" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="vhmr5BV3yXntm19uQJfj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="vhmr5BV3yXntm19uQJfj-33" target="vhmr5BV3yXntm19uQJfj-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vhmr5BV3yXntm19uQJfj-39" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vhmr5BV3yXntm19uQJfj-37">
+          <mxGeometry x="-0.3551" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vhmr5BV3yXntm19uQJfj-33" value="load sensor&lt;div&gt;50Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="1320" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vhmr5BV3yXntm19uQJfj-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="vhmr5BV3yXntm19uQJfj-34" target="vhmr5BV3yXntm19uQJfj-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="885" y="1280" />
+              <mxPoint x="740" y="1280" />
+              <mxPoint x="740" y="1255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vhmr5BV3yXntm19uQJfj-34" value="load sensor&lt;div&gt;50Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1320" width="70" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
