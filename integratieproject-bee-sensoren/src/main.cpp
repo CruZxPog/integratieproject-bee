@@ -6,9 +6,11 @@
 #include <Adafruit_SHT4x.h>
 
 // DHT22 Setup
-#define DHTPIN 2
-#define DHTTYPE DHT22
-DHT_Unified dht(DHTPIN, DHTTYPE);
+#define DHTPIN1 2
+#define DHTPIN2 3 
+#define DHTTYPE DHT22 
+DHT_Unified dht1(DHTPIN1, DHTTYPE);
+DHT_Unified dht2(DHTPIN2, DHTTYPE);
 
 // SHT4x Setup
 Adafruit_SHT4x sht4 = Adafruit_SHT4x();
@@ -17,9 +19,13 @@ void setup() {
   Serial.begin(115200);
   Serial.println("Initializing sensors...");
 
-  // Initialize DHT22
-  dht.begin();
-  Serial.println("DHT22 initialized");
+  // Initialize first DHT22
+  dht1.begin();
+  Serial.println("DHT22 Sensor 1 initialized");
+
+  // Initialize second DHT22
+  dht2.begin();
+  Serial.println("DHT22 Sensor 2 initialized");
 
   // Initialize SHT4x
   if (!sht4.begin(&Wire)) {
@@ -38,22 +44,41 @@ void setup() {
 void loop() {
   Serial.println("---- Sensor Readings ----");
 
-  // Read DHT22 Temperature and Humidity
+  // Read DHT22 Sensor 1 Temperature and Humidity
   sensors_event_t dhtEvent;
-  dht.temperature().getEvent(&dhtEvent);
+  dht1.temperature().getEvent(&dhtEvent);
   if (isnan(dhtEvent.temperature)) {
-    Serial.println("Error reading DHT22 temperature!");
+    Serial.println("Error reading DHT22 Sensor 1 temperature!");
   } else {
-    Serial.print("DHT22 Temperature: ");
+    Serial.print("DHT22 Sensor 1 Temperature: ");
     Serial.print(dhtEvent.temperature);
     Serial.println(" °C");
   }
 
-  dht.humidity().getEvent(&dhtEvent);
+  dht1.humidity().getEvent(&dhtEvent);
   if (isnan(dhtEvent.relative_humidity)) {
-    Serial.println("Error reading DHT22 humidity!");
+    Serial.println("Error reading DHT22 Sensor 1 humidity!");
   } else {
-    Serial.print("DHT22 Humidity: ");
+    Serial.print("DHT22 Sensor 1 Humidity: ");
+    Serial.print(dhtEvent.relative_humidity);
+    Serial.println(" %");
+  }
+
+  // Read DHT22 Sensor 2 Temperature and Humidity
+  dht2.temperature().getEvent(&dhtEvent);
+  if (isnan(dhtEvent.temperature)) {
+    Serial.println("Error reading DHT22 Sensor 2 temperature!");
+  } else {
+    Serial.print("DHT22 Sensor 2 Temperature: ");
+    Serial.print(dhtEvent.temperature);
+    Serial.println(" °C");
+  }
+
+  dht2.humidity().getEvent(&dhtEvent);
+  if (isnan(dhtEvent.relative_humidity)) {
+    Serial.println("Error reading DHT22 Sensor 2 humidity!");
+  } else {
+    Serial.print("DHT22 Sensor 2 Humidity: ");
     Serial.print(dhtEvent.relative_humidity);
     Serial.println(" %");
   }
@@ -77,5 +102,5 @@ void loop() {
   Serial.println(" ms");
 
   Serial.println("--------------------------\n");
-  delay(3000);
+  delay(3000); 
 }
