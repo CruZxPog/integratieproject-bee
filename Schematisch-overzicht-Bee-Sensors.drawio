@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.4">
   <diagram name="Page-1" id="eJ0Qw4Db6nhhG4S1m9tW">
-    <mxGraphModel dx="831" dy="439" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="482" dy="254" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -18,20 +18,21 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="vhmr5BV3yXntm19uQJfj-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="vhmr5BV3yXntm19uQJfj-2" target="vhmr5BV3yXntm19uQJfj-33" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="410" y="1120" />
-              <mxPoint x="410" y="1335" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="vhmr5BV3yXntm19uQJfj-2" target="vhmr5BV3yXntm19uQJfj-34" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="483" y="1060" />
               <mxPoint x="940" y="1060" />
               <mxPoint x="940" y="1335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vORdM8-TU4AYZNdzt5eV-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vhmr5BV3yXntm19uQJfj-2" target="vhmr5BV3yXntm19uQJfj-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="483" y="1060" />
+              <mxPoint x="380" y="1060" />
+              <mxPoint x="380" y="1335" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -115,12 +116,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="vORdM8-TU4AYZNdzt5eV-6" value="&lt;span style=&quot;font-size: 12px; text-wrap-mode: wrap;&quot;&gt;De beheerder moet de sensoren onderhouden.&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vhmr5BV3yXntm19uQJfj-30">
+          <mxGeometry x="-0.7568" relative="1" as="geometry">
+            <mxPoint x="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="vhmr5BV3yXntm19uQJfj-2" target="vhmr5BV3yXntm19uQJfj-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="540" y="1120" />
               <mxPoint x="540" y="1240" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vORdM8-TU4AYZNdzt5eV-7" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vhmr5BV3yXntm19uQJfj-31">
+          <mxGeometry x="-0.2936" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="vhmr5BV3yXntm19uQJfj-33" target="vhmr5BV3yXntm19uQJfj-11" edge="1">
