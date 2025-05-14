@@ -1,11 +1,16 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.4">
   <diagram name="Page-1" id="eJ0Qw4Db6nhhG4S1m9tW">
-    <mxGraphModel dx="482" dy="254" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="1418" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="vhmr5BV3yXntm19uQJfj-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="vhmr5BV3yXntm19uQJfj-1" target="vhmr5BV3yXntm19uQJfj-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vORdM8-TU4AYZNdzt5eV-8" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;De imker moet&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;toegang hebben tot&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;de bijenkast om&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;die te onderhouden.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vhmr5BV3yXntm19uQJfj-32">
+          <mxGeometry x="-0.2951" y="-1" relative="1" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-1" value="Imker" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="460" y="1252" width="30" height="60" as="geometry" />
@@ -37,7 +42,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-2" value="Beheerder" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="460" y="1100" width="30" height="60" as="geometry" />
+          <mxGeometry x="440" y="1100" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-6" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="620" y="1070" width="270" height="270" as="geometry" />
@@ -129,9 +134,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="vORdM8-TU4AYZNdzt5eV-7" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vhmr5BV3yXntm19uQJfj-31">
+        <mxCell id="vORdM8-TU4AYZNdzt5eV-7" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;De beheerder moet&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;bij de ESP kunnen om&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;updates te doen&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;of data op te vragen&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vhmr5BV3yXntm19uQJfj-31">
           <mxGeometry x="-0.2936" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint y="20" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="vhmr5BV3yXntm19uQJfj-33" target="vhmr5BV3yXntm19uQJfj-11" edge="1">
