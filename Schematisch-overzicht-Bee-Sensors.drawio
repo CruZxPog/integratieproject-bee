@@ -124,11 +124,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="vhmr5BV3yXntm19uQJfj-33" target="vhmr5BV3yXntm19uQJfj-11" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="1320" />
+              <mxPoint x="650" y="1255" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="vORdM8-TU4AYZNdzt5eV-1" value="digital&lt;div&gt;hx711.h&lt;br&gt;&lt;div&gt;(read)&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vhmr5BV3yXntm19uQJfj-37">
           <mxGeometry x="-0.4111" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-1" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vhmr5BV3yXntm19uQJfj-33" value="load sensor&lt;div&gt;50Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
