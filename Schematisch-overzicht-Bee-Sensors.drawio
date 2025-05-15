@@ -144,6 +144,19 @@
             <mxPoint x="-2" y="7" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="lYtg9qMfZ3Qs8tmEbxhd-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vhmr5BV3yXntm19uQJfj-2" target="vhmr5BV3yXntm19uQJfj-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="1130" />
+              <mxPoint x="550" y="1240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYtg9qMfZ3Qs8tmEbxhd-21" value="De beheerder moet&amp;nbsp;&lt;div&gt;bij de ESP kunnen&lt;div&gt;&amp;nbsp;om updates te doen&amp;nbsp;&lt;/div&gt;&lt;div&gt;of data op te vragen.&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="lYtg9qMfZ3Qs8tmEbxhd-20">
+          <mxGeometry x="-0.0212" relative="1" as="geometry">
+            <mxPoint y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
