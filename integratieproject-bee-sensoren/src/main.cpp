@@ -1,9 +1,17 @@
 #include <Arduino.h>
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include <ArduinoJson.h>
 #include <Adafruit_Sensor.h>
 #include <DHT.h>
 #include <DHT_U.h>
 #include <Wire.h>
 #include <Adafruit_SHT4x.h>
+
+// Wi-Fi credentials
+const char* ssid = "MeowNetwork";
+const char* password = "12345678";
+const char* serverUrl = "http://10.42.0.1:5000/add-data";
 
 // DHT22 Setup
 #define DHTPIN1 11
@@ -19,13 +27,10 @@ void setup() {
   Serial.begin(115200);
   Serial.println("Initializing sensors...");
 
-  // Initialize first DHT22
+  // Initialize DHT22 sensors
   dht1.begin();
-  Serial.println("DHT22 Sensor 1 initialized");
-
-  // Initialize second DHT22
   dht2.begin();
-  Serial.println("DHT22 Sensor 2 initialized");
+  Serial.println("DHT22 sensors initialized");
 
   // Initialize SHT4x
   if (!sht4.begin(&Wire)) {
@@ -33,40 +38,73 @@ void setup() {
     while (1) delay(1);
   }
   Serial.println("SHT4x initialized");
-  Serial.print("Serial number 0x");
-  Serial.println(sht4.readSerial(), HEX);
 
-  // Configure SHT4x
   sht4.setPrecision(SHT4X_HIGH_PRECISION);
   sht4.setHeater(SHT4X_NO_HEATER);
+
+  // Connect to Wi-Fi
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\n✅ WiFi connected!");
+  Serial.println("IP address: " + WiFi.localIP().toString());
 }
 
 void loop() {
-  // DHT22 Sensor 1
-  sensors_event_t dhtEvent;
-  dht1.temperature().getEvent(&dhtEvent);
-  float dht1Temp = dhtEvent.temperature;
-  dht1.humidity().getEvent(&dhtEvent);
-  float dht1Hum = dhtEvent.relative_humidity;
+  // Read DHT22 Sensor 1
+  sensors_event_t event;
+  dht1.temperature().getEvent(&event);
+  float dht1Temp = event.temperature;
+  dht1.humidity().getEvent(&event);
+  float dht1Hum = event.relative_humidity;
 
-  // DHT22 Sensor 2
-  dht2.temperature().getEvent(&dhtEvent);
-  float dht2Temp = dhtEvent.temperature;
-  dht2.humidity().getEvent(&dhtEvent);
-  float dht2Hum = dhtEvent.relative_humidity;
+  // Read DHT22 Sensor 2
+  dht2.temperature().getEvent(&event);
+  float dht2Temp = event.temperature;
+  dht2.humidity().getEvent(&event);
+  float dht2Hum = event.relative_humidity;
 
-  // SHT4x
+  // Read SHT4x
   sensors_event_t shtHumidity, shtTemp;
-  uint32_t timestamp = millis();
   sht4.getEvent(&shtHumidity, &shtTemp);
-  timestamp = millis() - timestamp;
 
-  // Print alles op één regel, gescheiden door komma's
-  Serial.print("DHT1 "); Serial.print(dht1Temp); Serial.print("°C, ");
-  Serial.print("DHT1 "); Serial.print(dht1Hum); Serial.print("%, ");
-  Serial.print("DHT2 "); Serial.print(dht2Temp); Serial.print("°C, ");
-  Serial.print("DHT2 "); Serial.print(dht2Hum); Serial.print("%, ");
-  Serial.print("SHT "); Serial.print(shtTemp.temperature); Serial.print("°C, ");
-  Serial.print("SHT "); Serial.print(shtHumidity.relative_humidity); Serial.print("%, ");
-  delay(3000);
+  // Format data like Serial Monitor
+  String dataLine;
+  dataLine += "DHT1 " + String(dht1Temp) + "°C, ";
+  dataLine += "DHT1 " + String(dht1Hum) + "%, ";
+  dataLine += "DHT2 " + String(dht2Temp) + "°C, ";
+  dataLine += "DHT2 " + String(dht2Hum) + "%, ";
+  dataLine += "SHT " + String(shtTemp.temperature) + "°C, ";
+  dataLine += "SHT " + String(shtHumidity.relative_humidity) + "%";
+
+  // Print to Serial
+  Serial.println(dataLine);
+
+  // Send to Flask
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+    http.begin(serverUrl);
+    http.addHeader("Content-Type", "application/json");
+
+    StaticJsonDocument<256> doc;
+    doc["data"] = dataLine;
+
+    String json;
+    serializeJson(doc, json);
+
+    int code = http.POST(json);
+    Serial.print("HTTP Response: ");
+    Serial.println(code);
+    String response = http.getString();
+    Serial.println("Server says: " + response);
+
+    http.end();
+  } else {
+    Serial.println("WiFi disconnected!");
+  }
+
+  delay(3000);  // Wait 3 seconds before next reading
 }
