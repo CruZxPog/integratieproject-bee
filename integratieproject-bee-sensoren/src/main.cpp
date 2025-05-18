@@ -7,11 +7,9 @@
 #include <DHT_U.h>
 #include <Wire.h>
 #include <Adafruit_SHT4x.h>
-
+#include "secrets.h"
 // Wi-Fi credentials
-const char* ssid = "MeowNetwork";
-const char* password = "12345678";
-const char* serverUrl = "http://10.42.0.1:5000/add-data";
+
 
 // DHT22 Setup
 #define DHTPIN1 11
@@ -43,7 +41,7 @@ void setup() {
   sht4.setHeater(SHT4X_NO_HEATER);
 
   // Connect to Wi-Fi
-  WiFi.begin(ssid, password);
+  WiFi.begin(SSID, PASSWORD);
   Serial.print("Connecting to WiFi");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -86,7 +84,7 @@ void loop() {
   // Send to Flask
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
-    http.begin(serverUrl);
+    http.begin(SERVER_URL);
     http.addHeader("Content-Type", "application/json");
 
     StaticJsonDocument<256> doc;

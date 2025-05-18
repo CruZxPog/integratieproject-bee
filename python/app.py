@@ -1,3 +1,8 @@
+# Bronnen:
+# chatgpt.com (18/05)
+# copilot.github.com (18/05)
+# https://docs.python.org/3/library/csv.html (18/05)
+
 from flask import Flask, request, render_template
 import csv
 import os
