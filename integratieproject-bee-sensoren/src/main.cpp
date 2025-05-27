@@ -13,6 +13,8 @@
 #define DHTPIN1 D13           // GPIO pin voor DHT22 sensor 1
 #define DHTPIN2 D12         // GPIO pin voor DHT22 sensor 2
 #define DHTTYPE DHT22
+#define BUTTON_PIN 0  // GPIO 0 = ingebouwde knop (FireBeetle ESP32-S3)
+
 DHT_Unified dht1(DHTPIN1, DHTTYPE);
 DHT_Unified dht2(DHTPIN2, DHTTYPE);
 
@@ -24,7 +26,7 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
   Serial.println("INFO: Setup started!");
-
+  pinMode(BUTTON_PIN, INPUT_PULLUP);  // Interne pull-up weerstand aanzetten
   dht1.begin();
   dht2.begin();
   Serial.println("INFO: DHT22 sensors initialized");
